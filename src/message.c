@@ -331,6 +331,7 @@ attachFiles(const char *boundary, dstrbuf *out)
 		mimeB64EncodeFile(current, out);
 		dsbDestroy(file_type);
 		dsbDestroy(file_name);
+		fclose(current);
 	}
 	return SUCCESS;
 }
